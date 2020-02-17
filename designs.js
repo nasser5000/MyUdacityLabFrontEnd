@@ -2,6 +2,9 @@
 // Select size input
 
 // When size is submitted by the user, call makeGrid()
+let colorPicker = document.querySelector("#colorPicker").value;
+let gameTable   = document.getElementById("pixelCanvas"),
+    pixels;
 
 /**
 * @description creates a grid dynamically based on user input for height and width
@@ -46,3 +49,10 @@ start.addEventListener('submit', function(e){
     }
 
 });
+
+function reset(){
+    location.reload(true);
+}
+
+resetBtn = document.getElementById('reset');
+resetBtn.addEventListener('click', reset);
